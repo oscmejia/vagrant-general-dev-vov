@@ -58,6 +58,7 @@ Vagrant.configure("2") do |config|
 
     chef.add_recipe "apt"
     chef.add_recipe "chef_handler"
+    chef.add_recipe "chef_gem"
     chef.add_recipe "openssl"
     chef.add_recipe "stunnel"
     chef.add_recipe "yum"
@@ -67,11 +68,10 @@ Vagrant.configure("2") do |config|
     chef.add_recipe "mysql::server"
     chef.add_recipe "git"
     chef.add_recipe "git::server"
+    
+    chef.add_recipe "custom-vov"
 
-    #chef.add_recipe "redisio::default"
-    #chef.add_recipe "redisio::install"
-    #chef.add_recipe "redisio::redis_gem"
-    #chef.add_recipe "redisio::enable"
+    
 
 
     chef.log_level = :debug
